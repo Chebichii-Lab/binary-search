@@ -3,7 +3,7 @@
 # we will prove that binary search os faster than naive search
 
 # naive search: scan entire list and ask if its equal to the target
-# if yes, return the index
+# if yes, return the index 
 # if no, then return -1
 
 def naive_search(l, target):
@@ -29,9 +29,9 @@ def binary_search(l, target, low=None, high=None):
     # should return 3 because 10 is at index 3
     midpoint = (low + high) // 2  # 2
 
-    if l(midpoint) == target:
+    if l[midpoint] == target:
         return midpoint
-    elif target < l [midpoint]:
+    elif target < l[midpoint]:
         return binary_search(l, target, low, midpoint-1)
     else:
         # target > l[midpoint]
